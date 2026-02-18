@@ -12,7 +12,6 @@ permissions:
 jobs:
   docker:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,5 +35,6 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/reldnahc/ai-jeopardy-whisper-api:latest
-            ghcr.io/reldnahc/ai-jeopardy-whisper-api:${{ github.sha }}
+            ghcr.io/reldnahc/ai-jeopardy-kokoro-api:latest
+            ghcr.io/reldnahc/ai-jeopardy-kokoro-api:${{ github.sha }}
+
